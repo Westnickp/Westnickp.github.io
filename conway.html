@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <title>Nick's Web Page</title>
+</head>
+
+<body>
+  <ul class="myHeader">
+    <li><a href="profile.html">About This Page</a></li>
+    <li><a href="conway.html">Conway's Game of Life</a></li>
+    <li><a href="nbodysim.html">Gravity Simulations</a></li>
+    <li><a href="minigames.html">Minigames</a></li>
+    <li><a href="memes.html">Mathematical Memes</a></li>
+  </ul>
+  <div>
+    <div class="left">
+      <h2 style="text-align:center;background-color:firebrick;
+                 color:whitesmoke;padding:4px;margin:0">
+        Quick Links
+      </h2>
+      <ul>
+        <li><a href="#top">Top of Page</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#game">The Game of Life</a></li>
+      </ul>
+    </div>
+
+    <div class="centerText">
+      <h1 id="top" style="text-align:center">Conway's Game of Life</h1>
+      <div id="rules" class="section">
+        <h2>The Rules</h2>
+        <p>
+          Conway's game of life is a cellular automaton which "simulates"
+          cellular underpopulation, overpopulation, reproduction, and society.
+          That said, the rules for each generation of cells, according to
+          <a href=https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
+          Wikipedia,
+          </a>
+          are the following:
+          <ol>
+            <li>Living cells with less than two neighbors die.</li>
+            <li>Living cells with more than three neighbors die.</li>
+            <li>Living cells with 2 or 3 neighbors survive.</li>
+            <li>Dead cells with exactly 3 live neighbors become living cells.</li>
+          </ol>
+        </p>
+      </div>
+      <div id="game" class="section">
+        <h2>The Game of Life</h2>
+        <p>
+          See the right side of the page for buttons that will control the game.
+        </p>
+        <button style="float:right;clear:both;padding:8px 16px;margin:10px;"
+                onclick="nextGrid();">
+          Single Step Forward
+        </button>
+        <button style="float:right;padding:8px 16px;margin:10px;"
+                onclick="paintGridOnCanvas(generateRandomGrid(), canvas);">
+          Randomize
+        </button>
+        <button style="float:right;padding:8px 16px;margin:10px;"
+                onclick="pauseButton();">
+          Pause
+        </button>
+        <button style="float:right;padding:8px 16px;margin:10px;"
+                onclick="playButton();">
+          Play
+        </button>
+
+        <div style="float:right;clear:both;">
+          <input id="numCells" type="number" value=40
+                 style="float:right;clear:both;margin:0px 8px">
+          </input>
+          <label for="numCells">Number of Rows/Columns: </label>
+
+        </div>
+        <canvas id="canvas" height="400" width="400" style="background-color:firebrick"/>
+        <script src="conway.js"></script>
+      </div>
+    </div>
+
+    <div class="right">
+      <div>
+        <img src="StationaryRabbit.png" alt="My Rabbit" style="max-width:20vh"
+             onmouseover="this.src='Rabbit.gif';"
+             onmouseout="this.src='StationaryRabbit.png';">
+      </div>
+      <div>
+        <p>Hopefully I can put
+        something useful in this sidebar.
+        Until then, you'll have to enjoy this fun animation of a bunny
+        that I made. Mouse over it and see what happens!
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
