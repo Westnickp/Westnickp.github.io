@@ -51,7 +51,7 @@
       <div id="game" class="section">
         <h2>The Game of Life</h2>
         <p>
-          See the right side of the page for buttons that will control the game.
+          While paused, try clicking on the canvas to alter the cells!
         </p>
         <button style="float:right;clear:both;padding:8px 16px;margin:10px;"
                 onclick="nextGrid();">
@@ -60,6 +60,10 @@
         <button style="float:right;padding:8px 16px;margin:10px;"
                 onclick="paintGridOnCanvas(generateRandomGrid(), canvas);">
           Randomize
+        </button>
+        <button style="float:right;padding:8px 16px;margin:10px;"
+                onclick="paintGridOnCanvas(generateEmptyGrid(), canvas);">
+          Clear
         </button>
         <button style="float:right;padding:8px 16px;margin:10px;"
                 onclick="pauseButton();">
@@ -77,7 +81,7 @@
           <label for="numCells">Number of Rows/Columns: </label>
 
         </div>
-        <canvas id="canvas" height="400" width="400" style="background-color:firebrick"/>
+        <canvas id="canvas" height="400" width="400" style="background-color:firebrick;cursor:crosshair"/>
         <script src="conway.js"></script>
       </div>
     </div>

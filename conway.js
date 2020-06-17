@@ -10,6 +10,29 @@ ctx.lineWidth = 1;
 var currentGrid = generateEmptyGrid(.7);
 paintGridOnCanvas(currentGrid);
 
+function getCursorPosition(canvas, event) {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    return [x, y];
+}
+
+canvas.addEventListener('mousedown', function(e) {
+  if (isPlaying === true) {
+    alert("Please pause the game in order to toggle cells by clicking.");
+  } else {
+    let mousePosition = getCursorPosition(canvas, e);
+    let cellWidth = canvas.height/numDivisionsInput.value;
+    mousePosition[0] -= mousePosition[0] % cellWidth;
+    mousePosition[1] -= mousePosition[0] % cellWidth;
+    let col = Math.round(mousePosition[0]/cellWidth);
+    let row = Math.round(mousePosition[1]/cellWidth);
+    currentGrid[row][col] = 1 - currentGrid[row][col];
+    paintGridOnCanvas(currentGrid);
+  }
+
+});
+
 function playButton() {
   if (isPlaying !== true) {
     id = setInterval(nextGrid, 200);
@@ -28,7 +51,7 @@ function generateEmptyGrid() {
   for (let i = 0; i < cellsAcross; i++) {
     let thisRow = [];
     for (let j = 0; j < cellsAcross; j++) {
-      thisRow.push(Math.round(Math.random()*scarcity));
+      thisRow.push(0);
     }
     grid.push(thisRow);
   }
