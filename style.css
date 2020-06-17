@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  text-align: left;
+  background-color: white;
+  margin: 0;
+}
+
+.myHeader {
+  text-align: center;
+  list-style-type: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0px 0px;
+  overflow: auto;
+  background-color: #444444;
+}
+
+.myHeader ul {
+  padding: 0px;
+}
+
+.myHeader li {
+  display:inline-block;
+}
+.myHeader li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.myHeader li a:hover {
+  background-color: #666666;
+}
+
+.left {
+  width: 20%;
+  height: 95vh;
+  margin: 5vh 0 0 0;
+  position: fixed;
+  float: left;
+  overflow: auto;
+  background-color: whitesmoke;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0px;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #888888;
+}
+
+.left ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: auto;
+}
+
+.left li {
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: whitesmoke;
+
+}
+
+.left li a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  display: inline-block;
+  padding: 4px;
+}
+.left li a:link, a:visited {
+
+}
+
+.left li a:hover, a:active {
+  background-color: firebrick;
+}
+
+.right {
+  width: 15%;
+  height: 95vh;
+  position: fixed;
+  margin: 5vh 0 0 0;
+  right: 0px;
+  padding: 80px 16px;
+  text-align: center;
+  float: left;
+  overflow: auto;
+  background-color: firebrick;
+  color: white;
+  border-top: 0;
+  border-left: 1px;
+  border-right: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: whitesmoke;
+}
+
+.centerText {
+  width: 65%;
+  margin-left: 20%;
+  margin-top: 5%;
+  float: left;
+  overflow: auto;
+  padding: 0px 32px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-style: solid;
+  border-color: #888888;
+}
+
+.section {
+  margin: 16px 0;
+  overflow: auto;
+  border-top: 1px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+.section a {
+  text-decoration:none;
+  color:black;
+  background-color:inherit;
+}
+
+.section a:hover {
+  background-color: powderblue;
+}
