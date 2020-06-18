@@ -18,19 +18,14 @@ function getCursorPosition(canvas, event) {
 }
 
 canvas.addEventListener('mousedown', function(e) {
-  if (isPlaying === true) {
-    alert("Please pause the game in order to toggle cells by clicking.");
-  } else {
-    let mousePosition = getCursorPosition(canvas, e);
-    let cellWidth = canvas.height/numDivisionsInput.value;
-    mousePosition[0] -= mousePosition[0] % cellWidth;
-    mousePosition[1] -= mousePosition[0] % cellWidth;
-    let col = Math.round(mousePosition[0]/cellWidth);
-    let row = Math.round(mousePosition[1]/cellWidth);
-    currentGrid[row][col] = 1 - currentGrid[row][col];
-    paintGridOnCanvas(currentGrid);
-  }
-
+  let mousePosition = getCursorPosition(canvas, e);
+  let cellWidth = canvas.height/numDivisionsInput.value;
+  mousePosition[0] -= mousePosition[0] % cellWidth;
+  mousePosition[1] -= mousePosition[0] % cellWidth;
+  let col = Math.round(mousePosition[0]/cellWidth);
+  let row = Math.round(mousePosition[1]/cellWidth);
+  currentGrid[row][col] = 1 - currentGrid[row][col];
+  paintGridOnCanvas(currentGrid);
 });
 
 function playButton() {

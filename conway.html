@@ -25,6 +25,7 @@
         <li><a href="#top">Top of Page</a></li>
         <li><a href="#rules">Rules</a></li>
         <li><a href="#game">The Game of Life</a></li>
+        <li><a href="#structures">Structures within the Game</a></li>
       </ul>
     </div>
 
@@ -51,7 +52,8 @@
       <div id="game" class="section">
         <h2>The Game of Life</h2>
         <p>
-          While paused, try clicking on the canvas to alter the cells!
+          While paused, try setting up some interesting shapes by clicking
+          to alter the cells. Some behave pretty strangely!
         </p>
         <button style="float:right;clear:both;padding:8px 16px;margin:10px;"
                 onclick="nextGrid();">
@@ -83,6 +85,54 @@
         </div>
         <canvas id="canvas" height="400" width="400" style="background-color:firebrick;cursor:crosshair"/>
         <script src="conway.js"></script>
+      </div>
+      <div id="structures" class="section">
+        <h2>Structures within the Game</h2>
+        <p>
+          The rules for Conway's game give rise to lots of interesting
+          structures. I've included here a few of my favorites that I learned
+          about from the <a href=http://pi.math.cornell.edu/~lipa/mec/lesson6.html>
+            Cornell Math Explorer's Club.</a>
+          Use the clicking feature to construct some of them and watch them go!
+        </p>
+        <div>
+          <img alt="Image of a Glider" src="glider.png" style="width:10%;float:right;border:1px solid black"/>
+          <h4>Gliders</h4>
+          <p>
+            If you construct the shape to the right, or some reflection/rotation
+            of it, then you'll create a glider. It will waddle diagonally across
+            the screen. Keep an eye out for it in random games too. They often
+            pop up.
+          </p>
+        </div>
+        <div>
+          <img alt="The F-pentomino" src="f_pentomino.png" style="width:10%;float:right;border:1px solid black"/>
+          <h4>F-Pentominos</h4>
+          <p>
+            This tetris block to the right looks simple but will actually evolve
+            into a very robust colony! And it ends up spitting some gliders out
+            in the process.
+          </p>
+        </div>
+        <div>
+          <img alt="The Boat" src="boat.png" style="width:10%;float:right;border:1px solid black"/>
+          <h4>Boats</h4>
+          <p>
+            The boat is not particularly exciting. Indeed, it doesn't do anything.
+            It's static. But that means it'll stay there until disturbed. It's
+            like a lobster. Maybe it isn't the most interesting animal in the
+            world but, barring sickness and predators, it will basically live
+            forever!
+          </p>
+        </div>
+        <div>
+          <h4>Vertical Lines!</h4>
+          <p>
+            What do you expect will happen if you create a vertical line on the
+            grid? 
+          </p>
+        </div>
+
       </div>
     </div>
 
