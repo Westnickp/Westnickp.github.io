@@ -67,11 +67,11 @@
                 onclick="paintGridOnCanvas(generateEmptyGrid(), canvas);">
           Clear
         </button>
-        <button style="float:right;padding:8px 16px;margin:10px;"
+        <button id = "pause" style="float:right;padding:8px 16px;margin:10px;"
                 onclick="pauseButton();">
           Pause
         </button>
-        <button style="float:right;padding:8px 16px;margin:10px;"
+        <button id="play" style="float:right;padding:8px 16px;margin:10px;"
                 onclick="playButton();">
           Play
         </button>
@@ -84,7 +84,6 @@
 
         </div>
         <canvas id="canvas" height="400" width="400" style="background-color:firebrick;cursor:crosshair"/>
-        <script src="conway.js"></script>
       </div>
       <div id="structures" class="section">
         <h2>Structures within the Game</h2>
@@ -126,13 +125,15 @@
           </p>
         </div>
         <div>
-          <h4>Vertical Lines!</h4>
+          <img alt="Pulsar" src="pulsar.png" style="width:10%;float:right;border:1px solid black"/>
+          <h4>The Pulsar</h4>
           <p>
-            What do you expect will happen if you create a vertical line on the
-            grid? 
+            The pulsar is a strange, cyclic pattern. Set up the weirdly tall
+            diamond shown
+            to the right (it needs to be seven blocks tall in total) and it will
+            pulse until interrupted by something else.
           </p>
         </div>
-
       </div>
     </div>
 
@@ -152,5 +153,5 @@
     </div>
   </div>
 </body>
-
+<script src="conway.js"></script>
 </html>

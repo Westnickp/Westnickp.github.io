@@ -6,9 +6,10 @@ canvas.style.border = "1px solid grey";
 ctx.fillStyle = "white";
 ctx.strokeStyle = "1px grey";
 ctx.lineWidth = 1;
+document.getElementById('pause').style.backgroundColor = "#888888";
 
 var currentGrid = generateEmptyGrid(.7);
-paintGridOnCanvas(currentGrid);
+paintGridOnCanvas(currentGrid = generateRandomGrid());
 
 function getCursorPosition(canvas, event) {
     const rect = canvas.getBoundingClientRect();
@@ -30,14 +31,18 @@ canvas.addEventListener('mousedown', function(e) {
 
 function playButton() {
   if (isPlaying !== true) {
-    id = setInterval(nextGrid, 200);
+    id = setInterval(nextGrid, 100);
     isPlaying = true;
   }
+  document.getElementById('pause').style.backgroundColor = "white";
+  document.getElementById('play').style.backgroundColor = "#888888";
 }
 
 function pauseButton() {
   clearInterval(id);
   isPlaying = false;
+  document.getElementById('pause').style.backgroundColor = "#888888";
+  document.getElementById('play').style.backgroundColor = "white";
 }
 
 function generateEmptyGrid() {
