@@ -138,3 +138,11 @@ body {
 .section a:hover {
   background-color: powderblue;
 }
+
+@media only screen and (max-width:800px) {
+  /* For mobile phones and small windows: */
+  .centerText, .right {
+    width:100%;
+  }
+
+}
