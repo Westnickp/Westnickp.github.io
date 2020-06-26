@@ -5,14 +5,13 @@
 
 body {
   text-align: left;
-  background-color: white;
+  background-color: firebrick;
   margin: 0;
 }
 
 .myHeader {
   text-align: center;
   list-style-type: none;
-  position: fixed;
   width: 100%;
   top: 0;
   margin: 0;
@@ -41,10 +40,9 @@ body {
 }
 
 .left {
+  display: none;
   width: 20%;
   height: 95vh;
-  margin: 5vh 0 0 0;
-  position: fixed;
   float: left;
   overflow: auto;
   background-color: whitesmoke;
@@ -91,8 +89,6 @@ body {
 .right {
   width: 15%;
   height: 95vh;
-  position: fixed;
-  margin: 5vh 0 0 0;
   right: 0px;
   padding: 80px 16px;
   text-align: center;
@@ -101,7 +97,7 @@ body {
   background-color: firebrick;
   color: white;
   border-top: 0;
-  border-left: 1px;
+  border-left: 0;
   border-right: 0;
   border-bottom: 0;
   border-style: solid;
@@ -109,16 +105,15 @@ body {
 }
 
 .centerText {
-  width: 65%;
-  margin-left: 20%;
-  margin-top: 5%;
+  width: 85%;
   float: left;
   overflow: auto;
   padding: 0px 32px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+  background-color: whitesmoke;
+  border-top: 1px;
+  border-left: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
   border-style: solid;
   border-color: #888888;
 }
