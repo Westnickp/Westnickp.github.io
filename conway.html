@@ -55,27 +55,26 @@
           While paused, try setting up some interesting shapes by clicking
           to alter the cells. Some behave pretty strangely!
         </p>
+        <button id="play" style="float:right;padding:8px 16px;margin:10px;clear:both;"
+                onclick="playButton();">
+          Play
+        </button>
+        <button id = "pause" style="float:right;padding:8px 16px;margin:10px;clear:both;"
+                onclick="pauseButton();">
+          Pause
+        </button>
         <button style="float:right;clear:both;padding:8px 16px;margin:10px;"
                 onclick="nextGrid();">
           Single Step Forward
         </button>
-        <button style="float:right;padding:8px 16px;margin:10px;"
+        <button style="float:right;padding:8px 16px;margin:10px;clear:both;"
                 onclick="paintGridOnCanvas(generateRandomGrid(), canvas);">
           Randomize
         </button>
-        <button style="float:right;padding:8px 16px;margin:10px;"
+        <button style="float:right;padding:8px 16px;margin:10px;clear:both;"
                 onclick="paintGridOnCanvas(generateEmptyGrid(), canvas);">
           Clear
         </button>
-        <button id = "pause" style="float:right;padding:8px 16px;margin:10px;"
-                onclick="pauseButton();">
-          Pause
-        </button>
-        <button id="play" style="float:right;padding:8px 16px;margin:10px;"
-                onclick="playButton();">
-          Play
-        </button>
-
         <div style="float:right;clear:both;">
           <input id="numCells" type="number" value=40
                  style="float:right;clear:both;margin:0px 8px">

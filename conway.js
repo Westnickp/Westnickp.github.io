@@ -12,10 +12,11 @@ var currentGrid = generateEmptyGrid(.7);
 paintGridOnCanvas(currentGrid = generateRandomGrid());
 
 function getCursorPosition(canvas, event) {
+    const correction = [0, -6]
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    return [x, y];
+    return [x+correction[0], y+correction[1]];
 }
 
 canvas.addEventListener('mousedown', function(e) {
